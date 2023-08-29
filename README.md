@@ -1,4 +1,4 @@
-# Solgames Roulette infos
+# Solgames Roulette Infos
 
 A simple script to send the result of the next Roulette spin on Solgames.io and send it to a Discord channel using a webhook.
 
