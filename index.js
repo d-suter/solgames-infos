@@ -39,11 +39,11 @@ script.onload = () => {
                 "description": `Colour: ${color}\nNumber: \`${number}\`\n\n[Enter now!](https://solgames.io/)`,
                 "color": parseInt(colorCode.replace('#', ''), 16),
                 "author": {
-                    "name": "Solgames Predictor",
+                    "name": "Solgames Infos",
                     "icon_url": "https://media.discordapp.net/attachments/1146157162746347611/1146157219805667391/Group_1.png",
                 },
                 "footer": {
-                    "text": "Solgames Predictor",
+                    "text": "Solgames Infos",
                     "icon_url": "https://media.discordapp.net/attachments/1146157162746347611/1146157219805667391/Group_1.png",
                 },
             }]
