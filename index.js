@@ -12,10 +12,6 @@ script.onload = () => {
 
     const webhookURL = 'YOUR_WEBHOOK_URL_HERE';
 
-    socket.on('connect', () => {
-        console.log('Connected to solgames.io');
-    });
-
     socket.on('roulette-started', (data) => {
         const color = data.color;
         const number = data.number;
@@ -24,26 +20,29 @@ script.onload = () => {
         switch (color) {
             case 'red':
                 colorCode = '#DF354E';
+                emoji = ':red_square:';
                 break;
             case 'black':
                 colorCode = '#26404F';
+                emoji = ':black_large_square:';
                 break;
             default:
                 colorCode = '#07C287';
+                emoji = ':green_square:';
                 break;
         }
 
         const payload = {
             "embeds": [{
                 "title": "What will the next **Roulette** spin be?",
-                "description": `Colour: ${color}\nNumber: \`${number}\`\n\n[Enter now!](https://solgames.io/)`,
+                "description": `Colour: ${emoji} ${color}\nNumber: \`${number}\`\n\n[Enter now!](https://solgames.io/)`,
                 "color": parseInt(colorCode.replace('#', ''), 16),
                 "author": {
-                    "name": "Solgames Infos",
+                    "name": "Solgames Predictor",
                     "icon_url": "https://media.discordapp.net/attachments/1146157162746347611/1146157219805667391/Group_1.png",
                 },
                 "footer": {
-                    "text": "Solgames Infos",
+                    "text": "Solgames Predictor",
                     "icon_url": "https://media.discordapp.net/attachments/1146157162746347611/1146157219805667391/Group_1.png",
                 },
             }]
