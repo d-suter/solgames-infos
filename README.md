@@ -53,7 +53,7 @@ script.onload = () => {
     });
 };
 ```
-Just simply paste it into your console (You can see how to open the console in the ##How to use steps 1-3)
+Just simply paste it into your console (You can see how to open the console in the How to use steps 1-3)
 
 ## Author
 
