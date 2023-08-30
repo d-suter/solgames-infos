@@ -32,6 +32,29 @@ The embed messages sent to Discord will have the following colors based on the r
 - Black: `#26404F`
 - Green: `#07C287`
 
+## Console Script
+
+If you don't want the info to be sent to your discord webhook, you can use the following script:
+
+```javascript
+const script = document.createElement('script');
+script.src = "https://cdn.socket.io/4.0.0/socket.io.min.js";
+document.head.appendChild(script);
+
+script.onload = () => {
+    const socket = io('wss://solgames.io', {
+        transports: ['websocket']
+    });
+
+    socket.on('roulette-started', (data) => {
+        const color = data.color;
+        const number = data.number;
+        console.log(data);     
+    });
+};
+```
+Just simply paste it into your console (You can see how to open the console in the ##How to use steps 1-3)
+
 ## Author
 
 [ceodavee](https://github.com/ceodavee)
